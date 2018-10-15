@@ -1,0 +1,158 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% University/School Laboratory Report
+% LaTeX Template
+% Version 3.1 (25/3/14)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Linux and Unix Users Group at Virginia Tech Wiki 
+% (https://vtluug.org/wiki/Example_LaTeX_chem_lab_report)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass{article}
+
+\usepackage[version=3]{mhchem} % Package for chemical equation typesetting
+\usepackage{siunitx} % Provides the \SI{}{} and \si{} command for typesetting SI units
+\usepackage{graphicx} % Required for the inclusion of images
+\usepackage{natbib} % Required to change bibliography style to APA
+\usepackage{amsmath} % Required for some math elements 
+\usepackage{hyperref}
+\usepackage{fontspec}
+\usepackage{xcolor}
+
+\definecolor{dark-blue}{rgb}{0.15,0.15,0.4}
+\hypersetup{colorlinks,linkcolor={dark-blue},citecolor={dark-blue},urlcolor={dark-blue}}
+
+% the main font, with all features on
+\setmainfont
+[ ExternalLocation ,
+      Mapping          = tex-text ,
+      Numbers          = OldStyle ,
+      Ligatures        = {Common,Contextual} ,
+      BoldFont         = texgyrepagella-bold.otf ,
+      ItalicFont       = texgyrepagella-italic.otf ,
+      BoldItalicFont   = texgyrepagella-bolditalic.otf ]
+      {texgyrepagella-regular.otf}
+    
+  % same like the main font, but without old-style nums
+  \newfontfamily\newnums
+    [ ExternalLocation ,
+      Mapping          = tex-text ,
+      Ligatures        = {Common,Contextual} ,
+      BoldFont         = texgyrepagella-bold.otf ,
+      ItalicFont       = texgyrepagella-italic.otf ,
+      BoldItalicFont   = texgyrepagella-bolditalic.otf ]
+    {texgyrepagella-regular.otf}
+
+\setlength\parindent{0pt} % Removes all indentation from paragraphs
+
+\renewcommand{\labelenumi}{\alph{enumi}.} % Make numbering in the enumerate environment by letter rather than number (e.g. section 6)
+
+\newcommand{\hmwkAuthorName}{
+  Rihan \textsc{Stephen Pereira} \\
+  \texttt{rihanstephen.pereira576@myci.csuci.edu, studentID - 002497665}
+  \and
+  Niranjan \textsc{Pawar}\\
+  \texttt{something@myci.csuci.edu, studentID - 0011xxx}
+}
+%\usepackage{times} % Uncomment to use the Times New Roman font
+
+%----------------------------------------------------------------------------------------
+%	DOCUMENT INFORMATION
+%----------------------------------------------------------------------------------------
+
+\title{COMP 590 - Android Development \\ System Proposal} % Title
+
+\author{\hmwkAuthorName} % Author name
+
+\date{\today} % Date for the report
+
+\begin{document}
+
+\maketitle % Insert the title, author and date
+
+\begin{center}
+\begin{tabular}{l r}
+Instructor: & Prof. Brian Thoms% Instructor/supervisor
+\end{tabular}
+\end{center}
+
+% If you wish to include an abstract, uncomment the lines below
+\begin{abstract}
+  For the class project of COMP 590 - Mobile Development, we would like to contribute to existing open source android app - Software Engineering Daily(SE Daily). SE Daily is a podcast app which produces and delivers technical content on various software engineering topics ranging from cloud engineering, security to machine learning. SE Daily is on web - \href{https://www.softwaredaily.com}{softwaredaily.com}, android and IOS platform. The app is in heavy development and has an early beta version. Its currently looking for volunteers to build/improve/fix functionality on either of their platforms.
+\end{abstract}
+
+%----------------------------------------------------------------------------------------
+%	SECTION 1
+%----------------------------------------------------------------------------------------
+\section{Application Domain}
+The SE daily app falls into education space. It main goal is to provide free technical content for software developers around the world.
+
+
+%----------------------------------------------------------------------------------------
+%	SECTION 2
+%----------------------------------------------------------------------------------------
+\section{Business problem or business need for the mobile application}
+Having a mobile application gives the community a custom interface instead of serving the podcast content via wordpress site. With mobile app, they can do user subscriptions, recommendations(long term goal), login, comments, etc. The aspirational idea is to build a community because the idea of 'developer community' has not really been solved and its not winner takes all (Stack overflow, dev.to, Free Code Camp, and Software Daily could all coexist successfully. Secondly, the volume of developers in the world is skyrocketing so forming a community around this podcast app is a good niche.
+
+
+%----------------------------------------------------------------------------------------
+%	SECTION 3
+%----------------------------------------------------------------------------------------
+\section{Three Distinct User Personas}
+The three distinct user personas can be
+\begin{itemize}
+  \item \textbf{Student Developers} - students can absorb content at their leisure
+  \item \textbf{Software Professionals} - office goers can stream podcast episodes during their commute time
+  \item \textbf{Researchers} - researchers interested in hearing opinions of interviewee on their approaches to solve a particular problem
+\end{itemize}
+
+
+%----------------------------------------------------------------------------------------
+%	SECTION 4
+%----------------------------------------------------------------------------------------
+\section{Basic Functional Scope}
+As the app already exist, our goal is to addon some new features, fix broken functionality, solve bugs.
+Following is list of tasks that we have brainstormed so far
+
+\begin{itemize}
+  \item list view - currently only thumb view exist, adding a list view will stack the episodes vertically, adding more topics on first view of activity
+  \item Authentication 
+    \begin{itemize}
+      \item allow user to set profile picture
+      \item reset password missing
+    \end{itemize}
+  \item add a option to view downloaded podcasts
+  \item ability to resume each episode playback at a later time/date
+  \item Forum Integration
+    \begin{itemize}
+    \item ability to upvote/downvote episodes
+    \item  view threads per podcasts
+    \item post to thread
+    \item reply to post
+    \end{itemize}
+  \item Feed Integration - Feed activity will contain users upvoted, downvoted episodes, threads he has commented on, etc.
+  \item episodes scrolling doesn't work
+  \item android test coverage - unit tests are missing
+\end{itemize}
+
+%----------------------------------------------------------------------------------------
+%	SECTION 5
+%----------------------------------------------------------------------------------------
+\section{Baseline External Apps}
+There are already tons of podcast apps on android and iOS playstores like the popular NPR podcasts where the podcasts are exclusively NPR copyrighted. Also, there exist all-in-one(universal) podcast aggregator app (e.g podcast addict) with ability to add any podcast feed of interests. But none of them tailors content according to users choices which is the long term goal of SE Daily. Also, as noted in section 2 of this report, SE Daily serves technical content to developers, hobbyists, professionals and researchers.
+\end{document}
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:
