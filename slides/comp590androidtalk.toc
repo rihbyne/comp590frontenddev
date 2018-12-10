@@ -1,0 +1,7 @@
+\beamer@sectionintoc {1}{Background}{3}{0}{1}
+\beamer@sectionintoc {2}{Architecture}{7}{0}{2}
+\beamer@sectionintoc {3}{SE-Daily Android}{9}{0}{3}
+\beamer@subsectionintoc {3}{1}{feature 1 - List/Grid View Toggle}{11}{0}{3}
+\beamer@subsectionintoc {3}{2}{feature 2 - resume episode playback}{13}{0}{3}
+\beamer@subsectionintoc {3}{3}{feature 3 - view downloaded episodes}{15}{0}{3}
+\beamer@subsectionintoc {3}{4}{feature 4 - user accounts profile picture}{17}{0}{3}
